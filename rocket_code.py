@@ -51,4 +51,4 @@ notify = BashOperator(
     bash_command='echo "There are now $(ls /tmp/images/ | wc -l) images."',
     dag=dag,
 )
-
+download_launches >> get_pictures >> notify
